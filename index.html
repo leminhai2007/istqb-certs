@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISTQB Study Guides - Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pastel-pink: #FFD1DC;
+  --pastel-blue: #BAE1FF;
+  --pastel-green: #BAFFC9;
+  --pastel-yellow: #FFFFBA;
+  --pastel-purple: #D5BAFF;
+  --pastel-orange: #FFD8BA;
+  --pastel-cyan: #BAFFFE;
+  --pastel-rose: #FFBAE1;
+  --bg: #FDF6EC;
+  --text: #3D3D3D;
+  --text-light: #6B6B6B;
+  --shadow: rgba(0,0,0,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;min-height:100vh}
+.sketch-border{border:1.5px solid #ccc;border-radius:255px 15px 225px 15px/15px 225px 15px 255px}
+.deco{position:fixed;pointer-events:none;opacity:.06;font-size:3.5rem;z-index:0}
+.anim{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.anim.vis{opacity:1;transform:none}
+
+/* Hero */
+.hero{text-align:center;padding:70px 20px 30px;position:relative}
+.hero h1{font-family:'Caveat',cursive;font-size:clamp(2.5rem,6vw,4.2rem);font-weight:700;line-height:1.1}
+.hero h1 .highlight{background:linear-gradient(120deg,var(--pastel-yellow),var(--pastel-green));padding:2px 15px;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;display:inline-block;border:1.5px solid #ccc;transform:rotate(-1deg)}
+.hero .subtitle{font-size:1.3rem;color:var(--text-light);margin-top:10px}
+.hero .count-badge{display:inline-block;background:var(--pastel-purple);padding:6px 22px;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;border:1.5px solid #ccc;font-family:'Caveat',cursive;font-size:1.1rem;font-weight:700;margin-top:14px;transform:rotate(1deg)}
+
+/* Stats strip */
+.stats-strip{max-width:700px;margin:30px auto 0;padding:0 20px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.stat{text-align:center;background:#fff;padding:16px 26px;min-width:120px}
+.stat .num{font-family:'Caveat',cursive;font-size:2.4rem;font-weight:700;line-height:1}
+.stat .label{font-size:.9rem;color:var(--text-light)}
+
+/* Cards grid */
+.guides-grid{max-width:900px;margin:50px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.guide-card{background:#fff;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .3s,box-shadow .3s;display:block;position:relative}
+.guide-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px var(--shadow)}
+.guide-card .gc-top{padding:22px 20px;display:flex;align-items:center;gap:14px;color:var(--text)}
+.guide-card .gc-icon{font-size:2rem;min-width:44px;text-align:center}
+.guide-card .gc-code{font-family:'Caveat',cursive;font-size:1.9rem;font-weight:700;line-height:1}
+.guide-card .gc-name{font-family:'Caveat',cursive;font-size:1.3rem;font-weight:700;line-height:1.15}
+.guide-card .gc-body{padding:16px 20px 20px}
+.guide-card .gc-desc{font-size:.92rem;color:var(--text-light);line-height:1.4;margin-bottom:10px}
+.guide-card .gc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.guide-tag{display:inline-block;padding:2px 10px;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;border:1.5px solid #ccc;font-size:.78rem;font-weight:600}
+.guide-card .gc-arrow{position:absolute;top:18px;right:16px;font-size:1.3rem;color:var(--text-light);opacity:0;transition:opacity .3s}
+.guide-card:hover .gc-arrow{opacity:1}
+
+/* Add section */
+.add-section{max-width:700px;margin:10px auto 60px;padding:0 20px;text-align:center}
+.add-card{background:var(--pastel-yellow);padding:22px 28px;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;border:1.5px dashed #ccc;display:inline-block;font-size:1rem}
+.add-card strong{font-family:'Caveat',cursive;font-size:1.3rem}
+
+footer{text-align:center;padding:30px 20px;font-size:.9rem;color:var(--text-light)}
+</style>
+</head>
+<body>
+
+<div class="deco" style="top:10%;left:5%;transform:rotate(-15deg)">&#9998;</div>
+<div class="deco" style="top:35%;right:4%;transform:rotate(10deg)">&#9749;</div>
+<div class="deco" style="top:60%;left:3%;transform:rotate(5deg)">&#9997;</div>
+<div class="deco" style="top:80%;right:5%;transform:rotate(-8deg)">&#9881;</div>
+
+<section class="hero">
+  <h1><span class="highlight">ISTQB Study Guides</span></h1>
+  <p class="subtitle">Visual Infographic Library</p>
+  <span class="count-badge">&#128214; 2 Certified Level Guides</span>
+</section>
+
+<div class="stats-strip">
+  <div class="stat sketch-border">
+    <div class="num" style="color:#E74C3C">2</div>
+    <div class="label">Sub Pages</div>
+  </div>
+  <div class="stat sketch-border">
+    <div class="num">3</div>
+    <div class="label">Knowledge Levels</div>
+  </div>
+  <div class="stat sketch-border">
+    <div class="num">14</div>
+    <div class="label">Total Chapters</div>
+  </div>
+</div>
+
+<div class="guides-grid">
+
+  <!-- CTFL 4.0 -->
+  <a class="guide-card sketch-border anim" href="ctfl_4.0/index.html">
+    <div class="gc-top" style="background:var(--pastel-green)">
+      <div class="gc-icon">&#127891;</div>
+      <div class="gc-code">CTFL</div>
+      <div class="gc-name">Foundation Level<br>v4.0</div>
+      <span class="gc-arrow">&#10148;</span>
+    </div>
+    <div class="gc-body">
+      <div class="gc-desc">Entry-level ISTQB certification. Covers testing fundamentals, SDLC, static testing, test analysis &amp; design, test management, and tools.</div>
+      <div class="gc-tags">
+        <span class="guide-tag" style="background:var(--pastel-yellow)">40 Q &middot; 60 min</span>
+        <span class="guide-tag" style="background:var(--pastel-pink)">26 to pass</span>
+        <span class="guide-tag" style="background:var(--pastel-blue)">6 Chapters</span>
+        <span class="guide-tag" style="background:var(--pastel-purple)">K1&ndash;K3</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- TAE 2.0 -->
+  <a class="guide-card sketch-border anim" href="tae_2.0/index.html">
+    <div class="gc-top" style="background:var(--pastel-blue)">
+      <div class="gc-icon">&#129504;</div>
+      <div class="gc-code">TAE</div>
+      <div class="gc-name">Test Automation Engineer<br>v2.0</div>
+      <span class="gc-arrow">&#10148;</span>
+    </div>
+    <div class="gc-body">
+      <div class="gc-desc">Advanced-level ISTQB certification. Covers automation architecture, preparation, implementation, deployment strategies, reporting, verification, and continuous improvement.</div>
+      <div class="gc-tags">
+        <span class="guide-tag" style="background:var(--pastel-yellow)">40 Q &middot; 90 min</span>
+        <span class="guide-tag" style="background:var(--pastel-pink)">43 to pass</span>
+        <span class="guide-tag" style="background:var(--pastel-blue)">8 Chapters</span>
+        <span class="guide-tag" style="background:var(--pastel-purple)">K2&ndash;K4</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<div class="add-section">
+  <div class="add-card sketch-border">
+    &#128221; &nbsp;<strong>More guides coming...</strong> Add a new topic folder and it appears here.
+  </div>
+</div>
+
+<footer>
+  <p style="font-family:'Caveat',cursive;font-size:1.2rem;margin-bottom:4px">ISTQB Study Library</p>
+  <p>Click a card to open its visual study guide</p>
+</footer>
+
+<script>
+const animObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.anim').forEach(el=>animObs.observe(el));
+</script>
+</body>
+</html>

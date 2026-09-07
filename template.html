@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAGE TITLE</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+
+<!-- Decorative doodles (optional) -->
+<div class="deco" style="top:8%;left:3%;transform:rotate(-12deg)">&#9998;</div>
+<div class="deco" style="top:25%;right:2%;transform:rotate(8deg)">&#9749;</div>
+
+<!-- Back to Home button -->
+<a class="home-btn" href="../index.html" style="position:fixed;top:14px;right:14px;z-index:1001;">&#127968; Home</a>
+
+<!-- ═══ TOC Sidebar ═══ -->
+<div class="toc-overlay" id="tocOverlay"></div>
+<aside class="toc-sidebar" id="tocSidebar">
+  <div class="toc-header">
+    <h3>&#128214; SHORT TITLE</h3>
+    <div class="toc-sub">EXAM INFO LINE</div>
+  </div>
+  <nav class="toc-list">
+    <a class="toc-item active" href="#overview" data-section="overview">&#127919; Overview <span class="toc-pts">-</span></a>
+    <div class="toc-divider"></div>
+    <!-- ADD ONE TOC ITEM PER CHAPTER/SECTION -->
+    <a class="toc-item" href="#ch1" data-section="ch1">Ch.1 Title <span class="toc-pts">X pts</span></a>
+    <!-- ...more items... -->
+    <div class="toc-divider"></div>
+    <a class="toc-item" href="#strategy" data-section="strategy">&#128161; Strategy</a>
+  </nav>
+  <div class="toc-togo">
+    <div class="pass-pill">&#127942; Pass: XX pts</div>
+  </div>
+</aside>
+
+<!-- TOC toggle (mobile) -->
+<button class="toc-toggle" id="tocToggle">&#9776;</button>
+
+<!-- ═══ Main Content ═══ -->
+<div class="main-content" id="mainContent">
+
+<!-- ───────── OVERVIEW ───────── -->
+<section class="chapter-section" id="overview">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="&#128214;">
+      <div class="ch-title">MAIN TITLE</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">XX Total Points</span>
+        <span class="ch-tag diff">XX to Pass (XX%)</span>
+        <span class="ch-tag ks">XX Questions</span>
+      </div>
+    </div>
+
+    <!-- Quick Stats Cards -->
+    <div class="card-grid cols-4 anim" style="margin-bottom:24px">
+      <div class="info-card sketch-border" style="background:var(--pastel-green)">
+        <div style="font-family:'Caveat';font-size:2.4rem;font-weight:700">NUM</div>
+        <div class="ic-desc">Label</div>
+      </div>
+      <!-- ...more stat cards... -->
+    </div>
+
+    <!-- Meter Bar -->
+    <div class="meter-wrap anim">
+      <h4>METER TITLE</h4>
+      <div class="meter-track"><div class="meter-fill" data-width="65" style="background:linear-gradient(90deg,var(--pastel-green),var(--pastel-yellow))"></div></div>
+      <div class="meter-label">LABEL TEXT</div>
+    </div>
+
+    <!-- Tip Box -->
+    <div class="tip-box warn sketch-border anim">
+      <h4>&#9888; Title</h4>
+      Content text here.
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER SECTIONS ───────── -->
+<!-- REPEAT THIS BLOCK FOR EACH CHAPTER -->
+
+<section class="chapter-section" id="ch1">
+  <div class="section-wrap">
+
+    <!-- Chapter Banner -->
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="1">
+      <div class="ch-title">Ch.1 &mdash; Chapter Title</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">X pts (XX%)</span>
+        <span class="ch-tag diff">Difficulty</span>
+        <span class="ch-tag ks">X Questions</span>
+      </div>
+    </div>
+
+    <!-- Subsection: Cards Grid -->
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Subsection Title</div>
+      <div class="card-grid cols-3">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#128214;</div>
+          <div class="ic-title">Card Title</div>
+          <div class="ic-desc">Description text</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Hover for more
+            <div class="tt-box">Tooltip detail text here.</div>
+          </div>
+        </div>
+        <!-- ...more cards... -->
+      </div>
+    </div>
+
+    <!-- Subsection: Bullet List -->
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Another Subsection</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Bullet text here</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128161;</span><span>Another bullet</span></div>
+      </div>
+    </div>
+
+    <!-- Subsection: Flow Diagram -->
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Flow Title</div>
+      <div class="flow-row">
+        <div class="flow-node" style="background:var(--pastel-green)">
+          <div class="fn-icon">&#128187;</div>
+          <div class="fn-name">Step 1</div>
+          <div class="fn-desc">Description</div>
+          <div class="flow-arrow">&#10132;</div>
+        </div>
+        <!-- ...more nodes... -->
+      </div>
+    </div>
+
+    <!-- Subsection: Layer Stack -->
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Stack Title</div>
+      <div class="layer-stack">
+        <div class="layer-box sketch-border" style="background:var(--pastel-pink)">
+          <div class="layer-name">&#128204; Layer Name (Top)</div>
+          <div class="layer-desc">Description</div>
+        </div>
+        <!-- ...more layers... -->
+      </div>
+    </div>
+
+    <!-- Subsection: Bar Chart -->
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Bar Chart Title</div>
+      <div class="bar-rows">
+        <div class="bar-row">
+          <div class="bar-label" style="color:#E74C3C">Label</div>
+          <div class="bar-track"><div class="bar-fill" data-width="80" style="background:var(--pastel-pink)"></div></div>
+          <div class="bar-desc">Description</div>
+        </div>
+        <!-- ...more rows... -->
+      </div>
+    </div>
+
+    <!-- Tip Box at end of chapter -->
+    <div class="tip-box success sketch-border anim">
+      <h4>&#127919; Key Takeaway</h4>
+      Important summary text.
+    </div>
+
+  </div>
+</section>
+
+<!-- ...REPEAT CHAPTER BLOCKS... -->
+
+<!-- ───────── STRATEGY / SUMMARY ───────── -->
+<section class="chapter-section" id="strategy">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="&#128161;">
+      <div class="ch-title">Strategy / Summary</div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128640; Priority Order</div>
+      <div class="strat-flow">
+        <div class="strat-step sketch-border" style="background:var(--pastel-green)">
+          <div class="ss-num">Step 1</div>
+          <div class="ss-ch">What to do first</div>
+          <div class="ss-pts">Outcome</div>
+        </div>
+        <div class="strat-arrow">&#10132;</div>
+        <div class="strat-step sketch-border" style="background:var(--pastel-yellow)">
+          <div class="ss-num">Step 2</div>
+          <div class="ss-ch">What to do next</div>
+          <div class="ss-pts">Outcome</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128161; Tips</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Tip text here</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:30px 20px;font-size:.85rem;color:var(--text-light)">
+  <p style="font-family:'Caveat',cursive;font-size:1.2rem;margin-bottom:6px">PAGE TITLE</p>
+  <p>Based on content from <a href="#" style="color:var(--text);border-bottom:2px dashed var(--pastel-purple);text-decoration:none">Source</a></p>
+</footer>
+
+</div><!-- /main-content -->
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
+
+<script>
+// ─── TOC sidebar (mobile) ───
+const tocSidebar = document.getElementById('tocSidebar');
+const tocOverlay = document.getElementById('tocOverlay');
+const tocToggle  = document.getElementById('tocToggle');
+
+function openToc(){ tocSidebar.classList.add('open','hidden'); tocOverlay.classList.add('show'); tocSidebar.classList.remove('hidden'); }
+function closeToc(){ tocSidebar.classList.remove('open'); tocOverlay.classList.remove('show'); }
+
+tocToggle.addEventListener('click', ()=>{ tocSidebar.classList.contains('open') ? closeToc() : openToc(); });
+tocOverlay.addEventListener('click', closeToc);
+document.querySelectorAll('.toc-item').forEach(a=>{
+  a.addEventListener('click', ()=>{ if(window.innerWidth<=860) closeToc(); });
+});
+
+// ─── Active TOC highlight on scroll ───
+const sections = document.querySelectorAll('.chapter-section');
+const tocItems = document.querySelectorAll('.toc-item[data-section]');
+function updateToc(){
+  let current = '';
+  sections.forEach(s=>{ if(window.scrollY >= s.offsetTop - 120) current = s.id; });
+  tocItems.forEach(a=>{ a.classList.toggle('active', a.dataset.section===current); });
+}
+
+// ─── Scroll animations ───
+const animObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
+},{threshold:0.08});
+document.querySelectorAll('.anim').forEach(el=>animObs.observe(el));
+
+// ─── Bar fills ───
+const barObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const w = e.target.getAttribute('data-width');
+      if(w) e.target.style.width = w+'%';
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('.bar-fill').forEach(el=>{ el.style.width='0%'; barObs.observe(el); });
+
+// ─── Meter fills ───
+setTimeout(()=>{
+  document.querySelectorAll('.meter-fill, .progress-fill').forEach(el=>{
+    const w = el.getAttribute('data-width');
+    if(w) el.style.width = w+'%';
+  });
+},400);
+
+// ─── Scroll top button & TOC update ───
+window.addEventListener('scroll', ()=>{
+  document.getElementById('scrollTop').style.display = window.scrollY>400 ? 'flex' : 'none';
+  updateToc();
+});
+</script>
+</body>
+</html>

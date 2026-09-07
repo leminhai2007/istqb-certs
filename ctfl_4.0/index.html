@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISTQB CTFL V4.0 - Infographic Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+
+<div class="deco" style="top:8%;left:3%;transform:rotate(-12deg)">&#9998;</div>
+<div class="deco" style="top:25%;right:2%;transform:rotate(8deg)">&#9749;</div>
+<div class="deco" style="top:50%;left:1%;transform:rotate(4deg)">&#9997;</div>
+<div class="deco" style="top:75%;right:2%;transform:rotate(-6deg)">&#9881;</div>
+
+<a class="home-btn" href="../index.html" style="position:fixed;top:14px;right:14px;z-index:1001;">&#127968; Home</a>
+
+<div class="toc-overlay" id="tocOverlay"></div>
+<aside class="toc-sidebar" id="tocSidebar">
+  <div class="toc-header">
+    <h3>&#128214; CTFL V4.0</h3>
+    <div class="toc-sub">40 pts &middot; 40 Q &middot; 60 min</div>
+  </div>
+  <nav class="toc-list">
+    <a class="toc-item active" href="#overview" data-section="overview">&#127919; Overview <span class="toc-pts">-</span></a>
+    <div class="toc-divider"></div>
+    <a class="toc-item" href="#ch1" data-section="ch1">Ch.1 Fundamentals <span class="toc-pts">8 pts</span></a>
+    <a class="toc-item" href="#ch2" data-section="ch2">Ch.2 SDLC <span class="toc-pts">6 pts</span></a>
+    <a class="toc-item" href="#ch3" data-section="ch3">Ch.3 Static Testing <span class="toc-pts">4 pts</span></a>
+    <a class="toc-item" href="#ch4" data-section="ch4">Ch.4 Analysis &amp; Design <span class="toc-pts">11 pts</span></a>
+    <a class="toc-item" href="#ch5" data-section="ch5">Ch.5 Managing Activities <span class="toc-pts">9 pts</span></a>
+    <a class="toc-item" href="#ch6" data-section="ch6">Ch.6 Test Tools <span class="toc-pts">2 pts</span></a>
+    <div class="toc-divider"></div>
+    <a class="toc-item" href="#strategy" data-section="strategy">&#128161; Study Strategy</a>
+  </nav>
+  <div class="toc-togo">
+    <div class="pass-pill">&#127942; Pass: 26 pts</div>
+  </div>
+</aside>
+
+<button class="toc-toggle" id="tocToggle">&#9776;</button>
+
+<div class="main-content" id="mainContent">
+
+<!-- ───────── OVERVIEW ───────── -->
+<section class="chapter-section" id="overview">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="&#128214;">
+      <div class="ch-title">ISTQB Certified Tester Foundation Level</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">40 Total Points</span>
+        <span class="ch-tag diff">26 to Pass (65%)</span>
+        <span class="ch-tag ks">40 Questions</span>
+        <span class="ch-tag ks">60 Minutes</span>
+      </div>
+    </div>
+
+    <div class="card-grid cols-4 anim" style="margin-bottom:24px">
+      <div class="info-card sketch-border" style="background:var(--pastel-green)">
+        <div style="font-family:'Caveat';font-size:2.4rem;font-weight:700">40</div>
+        <div class="ic-desc">Questions</div>
+      </div>
+      <div class="info-card sketch-border" style="background:var(--pastel-blue)">
+        <div style="font-family:'Caveat';font-size:2.4rem;font-weight:700">40</div>
+        <div class="ic-desc">Total Points</div>
+      </div>
+      <div class="info-card sketch-border" style="background:var(--pastel-pink)">
+        <div style="font-family:'Caveat';font-size:2.4rem;font-weight:700;color:#E74C3C">26</div>
+        <div class="ic-desc">Points to Pass</div>
+      </div>
+      <div class="info-card sketch-border" style="background:var(--pastel-yellow)">
+        <div style="font-family:'Caveat';font-size:2.4rem;font-weight:700">60m</div>
+        <div class="ic-desc">Duration</div>
+      </div>
+    </div>
+
+    <div class="meter-wrap anim">
+      <h4>Pass Threshold</h4>
+      <div class="meter-track"><div class="meter-fill" data-width="65" style="background:linear-gradient(90deg,var(--pastel-green),var(--pastel-yellow),var(--pastel-orange))"></div></div>
+      <div class="meter-label">26 / 40 points (65%) &mdash; every question = 1 point</div>
+    </div>
+
+    <div class="tip-box info sketch-border anim">
+      <h4>&#9989; Good news</h4>
+      Every CTFL question is worth <strong>1 point</strong>. No weighted questions. 26 correct = pass. Simpler scoring than Advanced-level exams.
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Knowledge Levels</div>
+      <div class="card-grid cols-3">
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
+          <div class="ic-icon">&#128214;</div>
+          <div class="ic-title">K1 &mdash; Remember</div>
+          <div class="ic-desc">Recognize terms, lists, definitions</div>
+          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">~8 questions
+            <div class="tt-box">Fastest questions on the paper. Flashcards and repetition are enough. Expect them in early chapters and tool basics.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#128214;</div>
+          <div class="ic-title">K2 &mdash; Understand</div>
+          <div class="ic-desc">Explain why, compare, classify examples</div>
+          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">~24 questions
+            <div class="tt-box">Most of the exam. You need more than memory &mdash; know how ideas fit together. Explain why techniques work.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)">
+          <div class="ic-icon">&#128736;</div>
+          <div class="ic-title">K3 &mdash; Apply</div>
+          <div class="ic-desc">Use a technique on a short scenario</div>
+          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">~8 questions
+            <div class="tt-box">Pick boundary values, choose a test level, select the next step in a risk-based plan. Chapters 4 and 5 carry most K3 weight.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128200; Points Roadmap</div>
+      <div class="progress-track">
+        <div class="progress-fill" data-width="100"></div>
+        <div class="pass-line"></div>
+        <div class="pass-label">&#127919; Pass (26 pts)</div>
+      </div>
+      <div class="card-grid cols-3" style="gap:8px">
+        <div class="info-card" style="background:var(--pastel-green);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">8</div>
+          <div style="font-size:.82rem">Ch.1</div>
+        </div>
+        <div class="info-card" style="background:var(--pastel-blue);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">6</div>
+          <div style="font-size:.82rem">Ch.2</div>
+        </div>
+        <div class="info-card" style="background:var(--pastel-cyan);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">4</div>
+          <div style="font-size:.82rem">Ch.3</div>
+        </div>
+        <div class="info-card" style="background:var(--pastel-purple);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">11</div>
+          <div style="font-size:.82rem">Ch.4</div>
+        </div>
+        <div class="info-card" style="background:var(--pastel-orange);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">9</div>
+          <div style="font-size:.82rem">Ch.5</div>
+        </div>
+        <div class="info-card" style="background:var(--pastel-rose);padding:12px;text-align:center">
+          <div style="font-family:'Caveat';font-size:1.5rem;font-weight:700">2</div>
+          <div style="font-size:.82rem">Ch.6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 1 ───────── -->
+<section class="chapter-section" id="ch1">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="1">
+      <div class="ch-title">Ch.1 &mdash; Fundamentals of Testing</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">8 pts (20%)</span>
+        <span class="ch-tag diff">Mostly K1/K2</span>
+        <span class="ch-tag ks">8 Questions</span>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128221; What Testing Is</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#9989;</div>
+          <div class="ic-title">Testing IS</div>
+          <div class="ic-desc">Checking software by running it or reviewing work products, comparing actual vs expected, learning how the product behaves</div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)">
+          <div class="ic-icon">&#128683;</div>
+          <div class="ic-title">Testing IS NOT</div>
+          <div class="ic-desc">Proof that there are zero defects. It reduces risk and finds problems. Debugging (fixing defects) is separate.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128161; Key Terms</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128204;</span><span><strong>Test objectives</strong> &mdash; why you test</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128230;</span><span><strong>Testware</strong> &mdash; artifacts: plans, cases, data, reports</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128101;</span><span><strong>Roles</strong> &mdash; who does what in a team</span></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#9889; Why Organisations Test</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128176;</span><span>Failures cost money, reputation, and safety</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Supports confidence in releases, compliance, contracts</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128200;</span><span>Inform go/no-go decisions</span></div>
+      </div>
+      <div class="tt" style="display:inline-block;margin-top:10px;font-size:.9rem">Causes vs purpose
+        <div class="tt-box">Questions often contrast <strong>causes of defects</strong> (human error, complexity, time pressure) with <strong>why we test</strong> (find defects, build trust, inform decisions).</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128218; Seven Testing Principles</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128269;</div>
+          <div class="ic-title">Shows Defects</div>
+          <div class="ic-desc">Testing finds problems but <strong>cannot prove absence</strong> of all defects</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128200;</div>
+          <div class="ic-title">Exhaustive = Impossible</div>
+          <div class="ic-desc">Use <strong>risk and priorities</strong> instead of testing everything</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#9664;</div>
+          <div class="ic-title">Early Testing</div>
+          <div class="ic-desc">Saves time &mdash; <strong>shift left</strong> mindset starts here</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128202;</div>
+          <div class="ic-title">Defect Clustering</div>
+          <div class="ic-desc">A <strong>few modules</strong> hold most bugs (Pareto 80/20)</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128167;</div>
+          <div class="ic-title">Pesticide Paradox</div>
+          <div class="ic-desc">Same tests <strong>stop finding new issues</strong> &mdash; review &amp; update regularly</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#127760;</div>
+          <div class="ic-title">Context Matters</div>
+          <div class="ic-desc">Safety-critical <strong>vs</strong> internal tool &mdash; different approaches</div>
+        </div>
+      </div>
+      <div class="tip-box warn sketch-border" style="margin-top:16px">
+        <h4>&#9888; Absence-of-Errors Fallacy</h4>
+        Finding and fixing all defects does not mean the system is useful. A bug-free product that does not meet user needs still fails.
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128736; Test Process &amp; Habits</div>
+      <div class="flow-row">
+        <div class="flow-node" style="background:var(--pastel-green)"><div class="fn-icon">&#128221;</div><div class="fn-name">Planning</div><div class="fn-desc">Scope, approach, schedule</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-blue)"><div class="fn-icon">&#128269;</div><div class="fn-name">Analysis</div><div class="fn-desc">What to test &amp; why</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-yellow)"><div class="fn-icon">&#128736;</div><div class="fn-name">Design</div><div class="fn-desc">How to test</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-orange)"><div class="fn-icon">&#128230;</div><div class="fn-name">Implementation</div><div class="fn-desc">Build testware</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-pink)"><div class="fn-icon">&#9654;</div><div class="fn-name">Execution</div><div class="fn-desc">Run tests, log results</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-rose)"><div class="fn-icon">&#128200;</div><div class="fn-name">Completion</div><div class="fn-desc">Report &amp; close</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 2 ───────── -->
+<section class="chapter-section" id="ch2">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch2 anim" data-ch="2">
+      <div class="ch-title">Ch.2 &mdash; Testing Throughout the SDLC</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">6 pts (15%)</span>
+        <span class="ch-tag diff">K1/K2</span>
+        <span class="ch-tag ks">6 Questions</span>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128208; Lifecycle Models</div>
+      <div class="card-grid cols-3">
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128208;</div>
+          <div class="ic-title">Sequential</div>
+          <div class="ic-desc">Testing in defined phases after dev milestones</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
+            <div class="tt-box">Waterfall: testing happens after development. Linear, documentation-heavy. Limited feedback loops.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128260;</div>
+          <div class="ic-title">Iterative</div>
+          <div class="ic-desc">Testing repeats every sprint or increment</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
+            <div class="tt-box">Each iteration produces a working slice. Testing happens continuously within each cycle. Faster feedback.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128640;</div>
+          <div class="ic-title">Agile / DevOps</div>
+          <div class="ic-desc">Whole-team quality, CI/CD, automated checks</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
+            <div class="tt-box">Agile: fast feedback, working software, cross-role collaboration. DevOps adds continuous integration, delivery, and pipeline automation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128204; Test Levels</div>
+      <div class="layer-stack">
+        <div class="layer-box sketch-border" style="background:var(--pastel-pink)">
+          <div class="layer-name">&#128100; Acceptance</div>
+          <div class="layer-desc">Validate fitness for use &mdash; users or business reps involved</div>
+        </div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)">
+          <div class="layer-name">&#128187; System</div>
+          <div class="layer-desc">Whole product behaviour end to end</div>
+        </div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-blue)">
+          <div class="layer-name">&#128279; Integration</div>
+          <div class="layer-desc">Interfaces between components or systems</div>
+        </div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-green)">
+          <div class="layer-name">&#128295; Component (Unit)</div>
+          <div class="layer-desc">Small pieces, stubs/drivers, usually developers</div>
+        </div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Levels vs Types
+        <div class="tt-box" style="left:50%"><strong>Test levels</strong> = how much is integrated (component &rarr; system). <strong>Test types</strong> = what quality aspect you check (functional, performance, etc.). Do not confuse them.</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128204; Test Types</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9989;</div><div class="ic-title">Functional</div><div class="ic-desc">What the system does</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128200;</div><div class="ic-title">Non-Functional</div><div class="ic-desc">How well (performance, usability, security)</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128260;</div><div class="ic-title">Regression</div><div class="ic-desc">Changes did not break existing behaviour</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#10003;</div><div class="ic-title">Confirmation</div><div class="ic-desc">A specific fix works correctly</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128295; Maintenance Testing</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128260;</span><span>Happens after release: fix, migrate, or retire software</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128200;</span><span><strong>Impact analysis</strong> decides how much to retest</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 3 ───────── -->
+<section class="chapter-section" id="ch3">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch3 anim" data-ch="3">
+      <div class="ch-title">Ch.3 &mdash; Static Testing</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">4 pts (10%)</span>
+        <span class="ch-tag diff">K1/K2 &middot; Easy Points</span>
+        <span class="ch-tag ks">4 Questions</span>
+      </div>
+    </div>
+
+    <div class="tip-box success sketch-border anim">
+      <h4>&#127919; Don't skip this</h4>
+      Only 4 questions but they are often "free" points. Small chapter, easy marks.
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128269; Static vs Dynamic</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
+          <div class="ic-icon">&#128196;</div>
+          <div class="ic-title">Static Testing</div>
+          <div class="ic-desc">Examines work products <strong>without executing code</strong>: requirements, designs, code reviews, checklists</div>
+          <div class="bullet-list" style="margin-top:8px">
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Find defects early, cheap feedback</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Improved communication</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128683;</span><span>Cannot catch runtime/timing bugs</span></div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#9654;</div>
+          <div class="ic-title">Dynamic Testing</div>
+          <div class="ic-desc">Requires <strong>running the software</strong> to observe behaviour</div>
+          <div class="bullet-list" style="margin-top:8px">
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Catches runtime issues</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Environment &amp; timing problems</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128683;</span><span>More expensive, later in lifecycle</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128101; Review Types (by formality)</div>
+      <div class="flow-row">
+        <div class="flow-node" style="background:var(--pastel-green)"><div class="fn-icon">&#128172;</div><div class="fn-name">Informal</div><div class="fn-desc">Ad-hoc, least formal</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-blue)"><div class="fn-icon">&#128221;</div><div class="fn-name">Walkthrough</div><div class="fn-desc">Author-led, team review</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-yellow)"><div class="fn-icon">&#128269;</div><div class="fn-name">Technical Review</div><div class="fn-desc">Peer review by experts</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-pink)"><div class="fn-icon">&#128221;</div><div class="fn-name">Inspection</div><div class="fn-desc">Most formal, data-driven</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128101; Review Roles</div>
+      <div class="card-grid cols-3">
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#9997;</div><div class="ic-title">Author</div><div class="ic-desc">Created the work product</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#127919;</div><div class="ic-title">Moderator</div><div class="ic-desc">Facilitates the review</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128269;</div><div class="ic-title">Reviewer</div><div class="ic-desc">Finds issues in the work</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128221;</div><div class="ic-title">Scribe</div><div class="ic-desc">Records findings</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128188;</div><div class="ic-title">Manager</div><div class="ic-desc">Oversees process</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#9989; Success Factors</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#127919;</span><span>Clear objectives for the review</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128101;</span><span>Right participants with domain knowledge</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128221;</span><span>Adequate preparation time</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128260;</span><span>Follow-up on defects found</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 4 ───────── -->
+<section class="chapter-section" id="ch4">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch4 anim" data-ch="4">
+      <div class="ch-title">Ch.4 &mdash; Test Analysis and Design</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">11 pts (27.5%)</span>
+        <span class="ch-tag diff">K2 + K3 &middot; Biggest Chapter</span>
+        <span class="ch-tag ks">11 Questions</span>
+      </div>
+    </div>
+
+    <div class="tip-box warn sketch-border anim">
+      <h4>&#128293; Half the exam weight</h4>
+      This is the biggest chapter. Technique questions dominate. Practice picking the right technique until it feels automatic.
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#127919; Choosing a Technique</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128221;</span><span>Techniques derive tests from: <strong>requirements, risks, structure, experience, or collaboration</strong></span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128161;</span><span>Exams love: "given this input domain / code / story, which technique fits best?"</span></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128221; Black-Box Techniques</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#128202;</div>
+          <div class="ic-title">Equivalence Partitioning</div>
+          <div class="ic-desc">Split inputs into classes that should behave the same</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Example
+            <div class="tt-box">Age 0&ndash;15 = child, 16&ndash;64 = adult, 65+ = senior. One test per partition = efficient coverage.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
+          <div class="ic-icon">&#9664;</div>
+          <div class="ic-title">Boundary Value Analysis</div>
+          <div class="ic-desc">Test edges of partitions (2-value and 3-value BVA)</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Example
+            <div class="tt-box">For range 1&ndash;100: test 0, 1, 2, 99, 100, 101. Most defects hide at boundaries.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)">
+          <div class="ic-icon">&#128203;</div>
+          <div class="ic-title">Decision Table Testing</div>
+          <div class="ic-desc">Rules with combinations of conditions and actions</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Example
+            <div class="tt-box">IF login valid AND 2FA on THEN redirect to dashboard. Each rule = one test case. Handles complex logic.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)">
+          <div class="ic-icon">&#128260;</div>
+          <div class="ic-title">State Transition Testing</div>
+          <div class="ic-desc">Valid states and transitions (tables or diagrams)</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Example
+            <div class="tt-box">Login: Logged Out &rarr; (valid creds) &rarr; Logged In &rarr; (timeout) &rarr; Session Expired. Test valid + invalid transitions.</div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)">
+          <div class="ic-icon">&#128100;</div>
+          <div class="ic-title">Use Case Testing</div>
+          <div class="ic-desc">Flows through user goals (happy path + alternatives)</div>
+          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Example
+            <div class="tt-box">E-commerce: browse &rarr; add to cart &rarr; checkout &rarr; payment. Include alternate flows like "out of stock".</div>
+          </div>
+        </div>
+      </div>
+      <div class="tip-box info sketch-border" style="margin-top:14px">
+        <h4>&#128202; K3 Tip</h4>
+        K3 items often ask <strong>how many test cases</strong> a technique produces. Work through numeric examples until automatic.
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128295; White-Box Techniques</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128196;</div>
+          <div class="ic-title">Statement Coverage</div>
+          <div class="ic-desc">Execute every line of code at least once</div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128203;</div>
+          <div class="ic-title">Branch/Decision Coverage</div>
+          <div class="ic-desc">Every true/false branch taken at least once</div>
+        </div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:10px;font-size:.9rem">Coverage caveat
+        <div class="tt-box" style="left:50%">Coverage is a <strong>measure</strong>, not a goal by itself. 100% statement coverage does not mean zero defects.</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#129302; Experience-Based</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128269;</div><div class="ic-title">Exploratory Testing</div><div class="ic-desc">Learn and test at the same time &mdash; charter-based sessions</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128161;</div><div class="ic-title">Error Guessing</div><div class="ic-desc">Target likely failures based on experience</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#129309; Collaboration-Based</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128101;</span><span>Write tests from <strong>user stories</strong> with the team</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128221;</span><span>ATDD/BDD style conversations (Given-When-Then)</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128203;</span><span>Checklist-driven sessions</span></div>
+      </div>
+      <div class="tt" style="display:inline-block;margin-top:8px;font-size:.9rem">ATDD focus
+        <div class="tt-box">Who collaborates, what artifact you start from, and what you produce: examples, scenarios, concrete tests.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 5 ───────── -->
+<section class="chapter-section" id="ch5">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch5 anim" data-ch="5">
+      <div class="ch-title">Ch.5 &mdash; Managing the Test Activities</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">9 pts (22.5%)</span>
+        <span class="ch-tag diff">K2 + K3</span>
+        <span class="ch-tag ks">9 Questions</span>
+      </div>
+    </div>
+
+    <div class="tip-box warn sketch-border anim">
+      <h4>&#9888; Pass/fail chapter</h4>
+      Seven or more correct here often decides pass vs fail. Combined with Ch.1&ndash;4, target 31&ndash;33 pts before this.
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128221; Test Planning</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128221;</span><span>A test plan covers: <strong>scope, approach, resources, schedule, entry/exit criteria</strong></span></div>
+        <div class="bullet-item"><span class="bi-icon">&#127919;</span><span>Aligns testing with project constraints</span></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#9888; Risk-Based Testing</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)">
+          <div class="ic-icon">&#128165;</div>
+          <div class="ic-title">Product Risk</div>
+          <div class="ic-desc">What can <strong>fail for users</strong> &mdash; quality aspects, usability, performance</div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)">
+          <div class="ic-icon">&#9200;</div>
+          <div class="ic-title">Project Risk</div>
+          <div class="ic-desc">Can we <strong>deliver on time</strong> &mdash; resources, scope, deadlines</div>
+        </div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:10px;font-size:.9rem">Priority principle
+        <div class="tt-box" style="left:50%">Risk-based testing <strong>prioritises effort</strong> where product and project risks are highest. More risk = more testing.</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128200; Monitoring &amp; Control</div>
+      <div class="flow-row">
+        <div class="flow-node" style="background:var(--pastel-blue)"><div class="fn-icon">&#128202;</div><div class="fn-name">Monitor</div><div class="fn-desc">Tests run, pass/fail, coverage, defects</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-yellow)"><div class="fn-icon">&#128200;</div><div class="fn-name">Compare</div><div class="fn-desc">Actual vs planned progress</div><div class="flow-arrow">&#10132;</div></div>
+        <div class="flow-node" style="background:var(--pastel-orange)"><div class="fn-icon">&#128736;</div><div class="fn-name">Control</div><div class="fn-desc">Re-prioritise, add resources, narrow scope, escalate</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128194; Configuration Management</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128230;</span><span>Keeps testware aligned with what you are testing</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128196;</span><span><strong>Version control, baselines, traceability</strong></span></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128027; Defect Management</div>
+      <div class="layer-stack">
+        <div class="layer-box sketch-border" style="background:var(--pastel-green)"><div class="layer-name">1. Log Report</div><div class="layer-desc">Clear title, steps, expected vs actual, environment</div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-blue)"><div class="layer-name">2. Triage</div><div class="layer-desc">Assign severity &amp; priority</div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)"><div class="layer-name">3. Track to Closure</div><div class="layer-desc">Fix, verify, close the defect</div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-orange)"><div class="layer-name">4. Analyse Trends</div><div class="layer-desc">Use data for process improvement</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128221; Defect Report Essentials</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128221;</div><div class="ic-title">Clear Title</div><div class="ic-desc">Summary that identifies the problem</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128221;</div><div class="ic-title">Steps to Reproduce</div><div class="ic-desc">Exact actions someone can follow</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128203;</div><div class="ic-title">Expected vs Actual</div><div class="ic-desc">What should happen vs what did happen</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128187;</div><div class="ic-title">Environment</div><div class="ic-desc">OS, browser, version, test data used</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CHAPTER 6 ───────── -->
+<section class="chapter-section" id="ch6">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch6 anim" data-ch="6">
+      <div class="ch-title">Ch.6 &mdash; Test Tools</div>
+      <div class="ch-meta">
+        <span class="ch-tag pts">2 pts (5%)</span>
+        <span class="ch-tag diff">K1/K2 &middot; Easy</span>
+        <span class="ch-tag ks">2 Questions</span>
+      </div>
+    </div>
+
+    <div class="tip-box success sketch-border anim">
+      <h4>&#127919; Final 2 points</h4>
+      Short chapter, perfect for securing the last points you need on exam day.
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128736; Tool Categories</div>
+      <div class="card-grid cols-3">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128203;</div><div class="ic-title">Management</div><div class="ic-desc">Test planning, tracking, reporting</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128196;</div><div class="ic-title">Static Analysis</div><div class="ic-desc">Code review, linting, compliance</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#9654;</div><div class="ic-title">Execution</div><div class="ic-desc">Run tests, capture results</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128200;</div><div class="ic-title">Performance</div><div class="ic-desc">Load, stress, spike testing</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128225;</div><div class="ic-title">Monitoring</div><div class="ic-desc">Production &amp; runtime observation</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128101;</div><div class="ic-title">Collaboration</div><div class="ic-desc">Communication &amp; coordination aids</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#9989; Benefits vs Risks</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)">
+          <div class="ic-icon">&#128640;</div>
+          <div class="ic-title">Benefits</div>
+          <div class="bullet-list" style="margin-top:6px">
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#9989;</span><span>Faster regression, more runs</span></div>
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#9989;</span><span>Fewer human slips on repetitive checks</span></div>
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#9989;</span><span>Consistency, speed, repeatability</span></div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)">
+          <div class="ic-icon">&#9888;</div>
+          <div class="ic-title">Risks</div>
+          <div class="bullet-list" style="margin-top:6px">
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#128683;</span><span>Unrealistic expectations</span></div>
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#128683;</span><span>High maintenance burden</span></div>
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#128683;</span><span>False confidence, tool mismatch</span></div>
+            <div class="bullet-item" style="font-size:.88rem"><span class="bi-icon">&#128683;</span><span>Neglect of exploratory work</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Key principle
+        <div class="tt-box" style="left:50%">Tools are <strong>not magic</strong>. They support the test strategy you already chose. Still need skilled people, maintenance, and lifecycle integration.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── STRATEGY ───────── -->
+<section class="chapter-section" id="strategy">
+  <div class="section-wrap">
+    <div class="ch-banner sketch-border bg-ch1 anim" data-ch="&#128161;">
+      <div class="ch-title">Study Strategy &mdash; Recommended Path</div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128640; Priority Order</div>
+      <div class="strat-flow">
+        <div class="strat-step sketch-border" style="background:var(--pastel-green)"><div class="ss-num">Step 1</div><div class="ss-ch">Ch.1 + Ch.3 + Ch.6</div><div class="ss-pts">14 pts (easy K1/K2)</div></div>
+        <div class="strat-arrow">&#10132;</div>
+        <div class="strat-step sketch-border" style="background:var(--pastel-yellow)"><div class="ss-num">Step 2</div><div class="ss-ch">+ Ch.2</div><div class="ss-pts">20 pts total</div></div>
+        <div class="strat-arrow">&#10132;</div>
+        <div class="strat-step sketch-border" style="background:var(--pastel-purple)"><div class="ss-num">Step 3</div><div class="ss-ch">+ Ch.4</div><div class="ss-pts">31 pts total</div></div>
+        <div class="strat-arrow">&#10132;</div>
+        <div class="strat-step sketch-border" style="background:var(--pastel-orange)"><div class="ss-num">Step 4</div><div class="ss-ch">+ Ch.5</div><div class="ss-pts" style="color:#E74C3C">&#127942; 40 pts!</div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128200; Cumulative Score Path</div>
+      <div class="meter-wrap">
+        <div class="meter-track" style="height:30px">
+          <div class="meter-fill" data-width="65" style="background:linear-gradient(90deg,var(--pastel-green),var(--pastel-blue),var(--pastel-cyan),var(--pastel-purple),var(--pastel-orange),var(--pastel-rose))"></div>
+        </div>
+        <div class="meter-label" style="font-size:1.1rem">Ch1: 7-8 &rarr; Ch2: 12-14 &rarr; Ch3: 16-18 &rarr; Ch4: 24-26 &rarr; Ch5: 31-33 &rarr; Ch6: ~33-35 &#127942;</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128161; Quick Tips</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Ch.4 + Ch.5 = half the exam. Plan extra study time there.</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>K3 questions need <strong>worked examples</strong>, not just definitions.</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Use official sample exams only <strong>after</strong> chapter mocks feel solid.</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Ch.3 is short but easy points &mdash; do not skip it.</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#9989;</span><span>Track progress by questions per chapter (1 pt each).</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:30px 20px;font-size:.85rem;color:var(--text-light)">
+  <p style="font-family:'Caveat',cursive;font-size:1.2rem;margin-bottom:6px">ISTQB CTFL V4.0 &mdash; Visual Study Guide</p>
+  <p>Based on content from <a href="https://mockexamnetwork.com/guides/how-to-pass-istqb-foundation/" target="_blank" style="color:var(--text);border-bottom:2px dashed var(--pastel-purple);text-decoration:none">Mock Exam Network</a></p>
+</footer>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
+
+<script>
+const tocSidebar=document.getElementById('tocSidebar'),tocOverlay=document.getElementById('tocOverlay'),tocToggle=document.getElementById('tocToggle');
+function openToc(){tocSidebar.classList.add('open','hidden');tocOverlay.classList.add('show');tocSidebar.classList.remove('hidden')}
+function closeToc(){tocSidebar.classList.remove('open');tocOverlay.classList.remove('show')}
+tocToggle.addEventListener('click',()=>{tocSidebar.classList.contains('open')?closeToc():openToc()});
+tocOverlay.addEventListener('click',closeToc);
+document.querySelectorAll('.toc-item').forEach(a=>{a.addEventListener('click',()=>{if(window.innerWidth<=860)closeToc()})});
+
+const sections=document.querySelectorAll('.chapter-section'),tocItems=document.querySelectorAll('.toc-item[data-section]');
+function updateToc(){let c='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)c=s.id});tocItems.forEach(a=>{a.classList.toggle('active',a.dataset.section===c)})}
+
+const animObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.08});
+document.querySelectorAll('.anim').forEach(el=>animObs.observe(el));
+
+const barObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){const w=x.target.getAttribute('data-width');if(w)x.target.style.width=w+'%'}})},{threshold:.3});
+document.querySelectorAll('.bar-fill').forEach(el=>{el.style.width='0%';barObs.observe(el)});
+
+setTimeout(()=>{document.querySelectorAll('.meter-fill,.progress-fill').forEach(el=>{const w=el.getAttribute('data-width');if(w)el.style.width=w+'%'})},400);
+
+window.addEventListener('scroll',()=>{document.getElementById('scrollTop').style.display=window.scrollY>400?'flex':'none';updateToc()});
+</script>
+</body>
+</html>
