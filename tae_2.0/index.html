@@ -97,7 +97,7 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
 .layer-box .layer-desc{font-size:.9rem;color:var(--text-light);margin-top:3px}
 
 /* Flow diagram */
-.flow-row{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px}
+.flow-row{display:flex;align-items:stretch;gap:0;overflow:visible;padding-bottom:8px}
 .flow-node{flex:1;min-width:140px;padding:16px 12px;text-align:center;background:#fff;position:relative;border-right:3px dashed #ccc}
 .flow-node:last-child{border-right:none}
 .flow-node .fn-icon{font-size:1.8rem;margin-bottom:4px}
@@ -136,7 +136,7 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
 .contract-arrow{font-size:1.8rem;color:var(--text-light)}
 
 /* Trap cards */
-.trap-card{background:#fff;padding:16px;position:relative;overflow:hidden}
+.trap-card{background:#fff;padding:16px;position:relative;overflow:visible}
 .trap-card::before{content:'!';position:absolute;top:-10px;right:-4px;font-family:'Caveat',cursive;font-size:3rem;font-weight:700;opacity:.08}
 .trap-card .tc-name{font-family:'Caveat',cursive;font-size:1.1rem;font-weight:700;margin-bottom:3px}
 .trap-card .tc-desc{font-size:.85rem;color:var(--text-light);line-height:1.3}
@@ -291,30 +291,9 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#128218; Knowledge Levels</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
-          <div class="ic-icon">&#128214;</div>
-          <div class="ic-title">K2 &mdash; Understand</div>
-          <div class="ic-desc">Explain concepts in own words</div>
-          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">Key for Ch.1 &amp; 7
-            <div class="tt-box">Comprehension, not memorization. Ch.1 and 7 are mostly K2 &mdash; easy points if studied first.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)">
-          <div class="ic-icon">&#128736;</div>
-          <div class="ic-title">K3 &mdash; Apply</div>
-          <div class="ic-desc">Use knowledge in real scenarios</div>
-          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">Key for Ch.3 &amp; 5
-            <div class="tt-box">Real situations requiring the right technique. Every word counts, especially Ch.3 framework layers.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)">
-          <div class="ic-icon">&#129504;</div>
-          <div class="ic-title">K4 &mdash; Analyse</div>
-          <div class="ic-desc">Break down complex scenarios, choose best solutions</div>
-          <div class="tt" style="display:inline-block;margin-top:8px;font-size:.85rem">Key for Ch.2, 6 &amp; 8
-            <div class="tt-box">3 pts each &mdash; highest value. Multiple plausible answers; think like an architect. Compare, weigh trade-offs, choose the <em>best</em>.</div>
-          </div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128214;</div><div class="ic-title"><span class="tt" style="display:inline-block">K2 &mdash; Understand<div class="tt-box">Explain concepts in own words Comprehension, not memorization. Ch.1 and 7 are mostly K2 &mdash; easy points if studied first.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128736;</div><div class="ic-title"><span class="tt" style="display:inline-block">K3 &mdash; Apply<div class="tt-box">Use knowledge in real scenarios Real situations requiring the right technique. Every word counts, especially Ch.3 framework layers.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#129504;</div><div class="ic-title"><span class="tt" style="display:inline-block">K4 &mdash; Analyse<div class="tt-box">Break down complex scenarios, choose best solutions 3 pts each &mdash; highest value. Multiple plausible answers; think like an architect. Compare, weigh trade-offs, choose the <em>best</em>.</div></span></div></div>
       </div>
     </div>
 
@@ -379,52 +358,31 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#9989; Benefits</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128640;</div><div class="ic-title">More Tests Per Build</div><div class="ic-desc">Far more than any manual team could run</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9889;</div><div class="ic-title">Faster Execution</div><div class="ic-desc">Tests run consistently at machine speed</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128260;</div><div class="ic-title">Consistency</div><div class="ic-desc">Same steps, same way &mdash; every single time</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127919;</div><div class="ic-title">Early Feedback</div><div class="ic-desc">Catch issues sooner, improve reliability</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128165;</div><div class="ic-title">Impossible Tests</div><div class="ic-desc">Parallel execution, timing-critical, remote setups</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#129302;</div><div class="ic-title">Complex Scenarios</div><div class="ic-desc">Manageable scenarios that would tie teams in knots</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128640;</div><div class="ic-title"><span class="tt" style="display:inline-block">More Tests Per Build<div class="tt-box">Far more than any manual team could run</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9889;</div><div class="ic-title"><span class="tt" style="display:inline-block">Faster Execution<div class="tt-box">Tests run consistently at machine speed</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128260;</div><div class="ic-title"><span class="tt" style="display:inline-block">Consistency<div class="tt-box">Same steps, same way &mdash; every single time</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127919;</div><div class="ic-title"><span class="tt" style="display:inline-block">Early Feedback<div class="tt-box">Catch issues sooner, improve reliability</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128165;</div><div class="ic-title"><span class="tt" style="display:inline-block">Impossible Tests<div class="tt-box">Parallel execution, timing-critical, remote setups</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#129302;</div><div class="ic-title"><span class="tt" style="display:inline-block">Complex Scenarios<div class="tt-box">Manageable scenarios that would tie teams in knots</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#9888; Challenges &amp; Limits</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128176;</div><div class="ic-title">High Upfront Cost</div><div class="ic-desc">Licenses, infra, training, hiring</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128295;</div><div class="ic-title">Ongoing Maintenance</div><div class="ic-desc">Frameworks don't maintain themselves</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128269;</div><div class="ic-title">Programmed Only</div><div class="ic-desc">Only checks what's explicitly coded &mdash; won't catch unexpected issues</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128683;</div><div class="ic-title">Can't Automate Everything</div><div class="ic-desc">Some manual tests have no effective automation path</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128176;</div><div class="ic-title"><span class="tt" style="display:inline-block">High Upfront Cost<div class="tt-box">Licenses, infra, training, hiring</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128295;</div><div class="ic-title"><span class="tt" style="display:inline-block">Ongoing Maintenance<div class="tt-box">Frameworks don't maintain themselves</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128269;</div><div class="ic-title"><span class="tt" style="display:inline-block">Programmed Only<div class="tt-box">Only checks what's explicitly coded &mdash; won't catch unexpected issues</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128683;</div><div class="ic-title"><span class="tt" style="display:inline-block">Can't Automate Everything<div class="tt-box">Some manual tests have no effective automation path</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128208; Dev Models</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:#fff">
-          <div class="ic-icon">&#128208;</div>
-          <div class="ic-title">Waterfall</div>
-          <div class="ic-desc">Sequential phases. Automation enters late.</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Auto potential: Low
-            <div class="tt-box">Automation enters during/after dev. Tests run in dedicated testing phase. Limited scope vs Agile.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:#fff">
-          <div class="ic-icon">&#128209;</div>
-          <div class="ic-title">V-Model</div>
-          <div class="ic-desc">Dev + Test paired per level. Frameworks encouraged.</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Auto potential: Medium
-            <div class="tt-box">Each dev stage maps to a test level: Component &rarr; Integration &rarr; System &rarr; Acceptance. Frameworks at each level.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:#fff">
-          <div class="ic-icon">&#128640;</div>
-          <div class="ic-title">Agile</div>
-          <div class="ic-desc">In-sprint automation, CI/CD, cross-role collaboration.</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Auto potential: High &#11088;
-            <div class="tt-box">Richest opportunities. Teams define automation goals alongside business priorities. Best environment for automation.</div>
-          </div>
-        </div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128208;</div><div class="ic-title"><span class="tt" style="display:inline-block">Waterfall<div class="tt-box">Sequential phases. Automation enters late. Automation enters during/after dev. Tests run in dedicated testing phase. Limited scope vs Agile.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128209;</div><div class="ic-title"><span class="tt" style="display:inline-block">V-Model<div class="tt-box">Dev + Test paired per level. Frameworks encouraged. Each dev stage maps to a test level: Component &rarr; Integration &rarr; System &rarr; Acceptance. Frameworks at each level.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128640;</div><div class="ic-title"><span class="tt" style="display:inline-block">Agile<div class="tt-box">In-sprint automation, CI/CD, cross-role collaboration. Richest opportunities. Teams define automation goals alongside business priorities. Best environment for automation.</div></span></div></div>
       </div>
     </div>
 
@@ -466,64 +424,47 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#128065; Designing for Testability</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)">
-          <div class="ic-icon">&#128065;</div>
-          <div class="ic-title">Observability</div>
-          <div class="ic-desc">Interfaces to peek inside &amp; verify results</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
-            <div class="tt-box">Expose internal state so test cases can check actual vs expected outcomes. Without it, you can't confirm correctness.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
-          <div class="ic-icon">&#128295;</div>
-          <div class="ic-title">Controllability</div>
-          <div class="ic-desc">Interfaces to interact &amp; trigger actions</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
-            <div class="tt-box">UI elements, function calls, TCP/IP, USB, electronic signals. Without controllability, you can't drive tests.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)">
-          <div class="ic-icon">&#128220;</div>
-          <div class="ic-title">Transparency</div>
-          <div class="ic-desc">Docs showing components &amp; interfaces</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Details
-            <div class="tt-box">Architecture docs lay out components and interfaces at every test level, supporting quality.</div>
-          </div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128065;</div><div class="ic-title"><span class="tt" style="display:inline-block">Observability<div class="tt-box">Interfaces to peek inside &amp; verify results Expose internal state so test cases can check actual vs expected outcomes. Without it, you can't confirm correctness.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128295;</div><div class="ic-title"><span class="tt" style="display:inline-block">Controllability<div class="tt-box">Interfaces to interact &amp; trigger actions UI elements, function calls, TCP/IP, USB, electronic signals. Without controllability, you can't drive tests.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128220;</div><div class="ic-title"><span class="tt" style="display:inline-block">Transparency<div class="tt-box">Docs showing components &amp; interfaces Architecture docs lay out components and interfaces at every test level, supporting quality.</div></span></div></div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128269; Analyzing Your System</div>
+      <div class="bullet-list">
+        <div class="bullet-item"><span class="bi-icon">&#128517;</span> <span>Every system is different &mdash; analyze common factors before choosing a solution</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128187;</span> <span>Different apps need different technical approaches (web, API, mobile, desktop)</span></div>
+        <div class="bullet-item"><span class="bi-icon">&#128101;</span> <span>Collaborate with stakeholders: manual testers, business folks, analysts</span></div>
+      </div>
+      <div class="card-grid cols-2" style="margin-top:10px">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128196;</div><div class="ic-title"><span class="tt" style="display:inline-block">Activities to Automate<div class="tt-box">Which test process activities need automation support (execution, build, integration, reporting).</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128172;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Levels<div class="tt-box">Which test levels need support &mdash; component, integration, system, acceptance.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128203;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Types<div class="tt-box">Which test types need support &mdash; functional, regression, performance, usability, etc.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128100;</div><div class="ic-title"><span class="tt" style="display:inline-block">Roles &amp; Skills<div class="tt-box">Which test roles and skill sets the solution must support &mdash; testers, developers, managers.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128230;</div><div class="ic-title"><span class="tt" style="display:inline-block">Products &amp; Families<div class="tt-box">Which software products, product lines, and product families need support.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-cyan)"><div class="ic-icon">&#128279;</div><div class="ic-title"><span class="tt" style="display:inline-block">Kinds of Systems<div class="tt-box">Which kinds of systems the automation must work with &mdash; embedded, cloud, mobile, legacy.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128421;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Data<div class="tt-box">Test data availability and quality &mdash; can you create, manage, and reuse data for automated runs?</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-rose)"><div class="ic-icon">&#128376;</div><div class="ic-title"><span class="tt" style="display:inline-block">Hard Scenarios<div class="tt-box">Ways to emulate hard-to-reach scenarios &mdash; failures, edge cases, external systems.</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#127760; Testing Environments</div>
       <div class="flow-row">
-        <div class="flow-node" style="background:var(--pastel-green)">
-          <div class="fn-icon">&#128187;</div>
-          <div class="fn-name">Local Dev</div>
-          <div class="fn-desc">Component, GUI, API<br>White-box</div>
+        <div class="flow-node" style="background:var(--pastel-green)"><div class="fn-icon">&#128187;</div><div class="fn-name"><span class="tt" style="display:inline-block">Local Dev<div class="tt-box">Component, GUI, API<br>White-box</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-blue)">
-          <div class="fn-icon">&#128295;</div>
-          <div class="fn-name">Build</div>
-          <div class="fn-desc">Component, Integration<br>Static analysis</div>
+        <div class="flow-node" style="background:var(--pastel-blue)"><div class="fn-icon">&#128295;</div><div class="fn-name"><span class="tt" style="display:inline-block">Build<div class="tt-box">Component, Integration<br>Static analysis</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-yellow)">
-          <div class="fn-icon">&#128279;</div>
-          <div class="fn-name">Integration</div>
-          <div class="fn-desc">System Integration<br>Black-box only</div>
+        <div class="flow-node" style="background:var(--pastel-yellow)"><div class="fn-icon">&#128279;</div><div class="fn-name"><span class="tt" style="display:inline-block">Integration<div class="tt-box">System Integration<br>Black-box only</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-orange)">
-          <div class="fn-icon">&#128640;</div>
-          <div class="fn-name">Pre-Production</div>
-          <div class="fn-desc">Performance, UAT<br>Mirrors prod</div>
+        <div class="flow-node" style="background:var(--pastel-orange)"><div class="fn-icon">&#128640;</div><div class="fn-name"><span class="tt" style="display:inline-block">Pre-Production<div class="tt-box">Performance, UAT<br>Mirrors prod</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-pink)">
-          <div class="fn-icon">&#9889;</div>
-          <div class="fn-name">Production</div>
-          <div class="fn-desc">Canary, Blue/Green<br>A/B testing</div>
+        <div class="flow-node" style="background:var(--pastel-pink)"><div class="fn-icon">&#9889;</div><div class="fn-name"><span class="tt" style="display:inline-block">Production<div class="tt-box">Canary, Blue/Green<br>A/B testing</div></span></div>
         </div>
       </div>
     </div>
@@ -559,19 +500,39 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     </div>
 
     <div class="sub-section anim">
+      <div class="sub-title">&#128190; Test Automation Architecture (gTAA)</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128187;</div><div class="ic-title"><span class="tt" style="display:inline-block">SUT Interface<div class="tt-box">Connection between the SUT and the framework</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128202;</div><div class="ic-title"><span class="tt" style="display:inline-block">Project Mgmt Interface<div class="tt-box">Tracks the test automation development progress</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128203;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Mgmt Interface<div class="tt-box">Maps test case definitions to automated test cases</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#9881;</div><div class="ic-title"><span class="tt" style="display:inline-block">Config Mgmt Interface<div class="tt-box">CI/CD pipelines, environments &amp; testware</div></span></div></div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Blueprint of your automation
+        <div class="tt-box" style="left:50%">The gTAA is the blueprint for how automated tests connect to the SUT, project management, test management, and configuration management (CI/CD pipelines, environments, testware).</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
+      <div class="sub-title">&#128295; Core Capabilities</div>
+      <div class="card-grid cols-4">
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#129514;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Generation<div class="tt-box">Auto-generate tests from a model &mdash; optional</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128196;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Definition<div class="tt-box">Define &amp; implement test cases &amp; suites, separated from the SUT</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128640;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Execution<div class="tt-box">Run tests automatically + logging &amp; reporting</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128279;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Adaptation<div class="tt-box">Adaptors to connect to the SUT via APIs, protocols, services</div></span></div></div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Generate &rarr; Define &rarr; Execute &rarr; Adapt
+        <div class="tt-box" style="left:50%">Identify which of these capabilities each tool provides, then select tooling that covers all four. Generation is optional &mdash; it comes from model-based testing.</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
       <div class="sub-title">&#127959; Framework Layers</div>
       <div class="layer-stack">
-        <div class="layer-box sketch-border" style="background:var(--pastel-pink)">
-          <div class="layer-name">&#128204; Test Scripts (Top)</div>
-          <div class="layer-desc">Actual test cases &mdash; call business logic, never jump to core libraries</div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-pink)"><div class="layer-name"><span class="tt" style="display:inline-block">&#128204; Test Scripts (Top)<div class="tt-box">Actual test cases &mdash; call business logic, never jump to core libraries</div></span></div>
         </div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)">
-          <div class="layer-name">&#128295; Business Logic (Middle)</div>
-          <div class="layer-desc">System-specific code, configs, app connections</div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)"><div class="layer-name"><span class="tt" style="display:inline-block">&#128295; Business Logic (Middle)<div class="tt-box">System-specific code, configs, app connections</div></span></div>
         </div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-blue)">
-          <div class="layer-name">&#128230; Core Libraries (Bottom)</div>
-          <div class="layer-desc">Reusable code &mdash; shared across teams &amp; apps</div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-blue)"><div class="layer-name"><span class="tt" style="display:inline-block">&#128230; Core Libraries (Bottom)<div class="tt-box">Reusable code &mdash; shared across teams &amp; apps</div></span></div>
         </div>
       </div>
       <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Why layers matter
@@ -582,13 +543,13 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#9881; Automation Approaches</div>
       <div class="card-grid cols-4">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127909;</div><div class="ic-title">Capture/Playback</div><div class="ic-desc">Record clicks. Quick demos only.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128196;</div><div class="ic-title">Linear Scripting</div><div class="ic-desc">Step-by-step. Small projects.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128736;</div><div class="ic-title">Structured</div><div class="ic-desc">Reusable components. Most common.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128260;</div><div class="ic-title">TDD</div><div class="ic-desc">Tests first. Red-Green-Refactor.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128202;</div><div class="ic-title">Data-Driven</div><div class="ic-desc">Same test, different data sets.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128273;</div><div class="ic-title">Keyword-Driven</div><div class="ic-desc">Keyword tables. Non-tech friendly.</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-cyan)"><div class="ic-icon">&#129309;</div><div class="ic-title">BDD</div><div class="ic-desc">Given-When-Then. Collab.</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127909;</div><div class="ic-title"><span class="tt" style="display:inline-block">Capture/Playback<div class="tt-box">Record clicks. Quick demos only.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128196;</div><div class="ic-title"><span class="tt" style="display:inline-block">Linear Scripting<div class="tt-box">Step-by-step. Small projects.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128736;</div><div class="ic-title"><span class="tt" style="display:inline-block">Structured<div class="tt-box">Reusable components. Most common.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128260;</div><div class="ic-title"><span class="tt" style="display:inline-block">TDD<div class="tt-box">Tests first. Red-Green-Refactor.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128202;</div><div class="ic-title"><span class="tt" style="display:inline-block">Data-Driven<div class="tt-box">Same test, different data sets.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128273;</div><div class="ic-title"><span class="tt" style="display:inline-block">Keyword-Driven<div class="tt-box">Keyword tables. Non-tech friendly.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-cyan)"><div class="ic-icon">&#129309;</div><div class="ic-title"><span class="tt" style="display:inline-block">BDD<div class="tt-box">Given-When-Then. Collab.</div></span></div></div>
       </div>
       <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Quick ID tips
         <div class="tt-box" style="left:50%">Reuse test logic = modular. External data = data-driven. Non-tech keywords = keyword-driven.</div>
@@ -596,22 +557,52 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     </div>
 
     <div class="sub-section anim">
+      <div class="sub-title">&#128161; Design Principles</div>
+      <div class="card-grid cols-2">
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128161;</div>
+          <div class="ic-title">OOP Principles</div>
+          <div class="bullet-list" style="margin-top:6px">
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128274;</span><span class="tt" style="display:inline-block"><strong>Encapsulation</strong><div class="tt-box">Hide internals</div></span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128065;</span><span class="tt" style="display:inline-block"><strong>Abstraction</strong><div class="tt-box">Expose only essentials</div></span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128257;</span><span class="tt" style="display:inline-block"><strong>Inheritance</strong><div class="tt-box">Reuse via class hierarchy</div></span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128260;</span><span class="tt" style="display:inline-block"><strong>Polymorphism</strong><div class="tt-box">Same interface, many forms</div></span></div>
+          </div>
+        </div>
+        <div class="info-card sketch-border" style="background:#fff">
+          <div class="ic-icon">&#128736;</div>
+          <div class="ic-title">SOLID Principles</div>
+          <div class="bullet-list" style="margin-top:6px">
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128295;</span><span><strong>S</strong>ingle Responsibility</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128208;</span><span><strong>O</strong>pen-Closed</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128462;</span><span><strong>L</strong>iskov Substitution</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128203;</span><span><strong>I</strong>nterface Segregation</span></div>
+            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128491;</span><span><strong>D</strong>ependency Inversion</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tt" style="display:block;text-align:center;margin-top:12px;font-size:.9rem">Better code, better tests
+        <div class="tt-box" style="left:50%">OOP and SOLID principles improve code readability, maintainability, and scalability &mdash; exactly like in regular software development.</div>
+      </div>
+    </div>
+
+    <div class="sub-section anim">
       <div class="sub-title">&#128736; Design Patterns</div>
       <div class="card-grid cols-4">
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128687;</div><div class="ic-title">Facade</div><div class="ic-desc">Hide complexity, show only what testers need</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128274;</div><div class="ic-title">Singleton</div><div class="ic-desc">One connection to system at a time</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127968;</div><div class="ic-title">Page Object Model</div><div class="ic-desc">All page info in one place &mdash; update once</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128260;</div><div class="ic-title">Flow Model</div><div class="ic-desc">Layer above POM for reusability</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128687;</div><div class="ic-title"><span class="tt" style="display:inline-block">Facade<div class="tt-box">Hide complexity, show only what testers need</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128274;</div><div class="ic-title"><span class="tt" style="display:inline-block">Singleton<div class="tt-box">One connection to system at a time</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#127968;</div><div class="ic-title"><span class="tt" style="display:inline-block">Page Object Model<div class="tt-box">All page info in one place &mdash; update once</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128260;</div><div class="ic-title"><span class="tt" style="display:inline-block">Flow Model<div class="tt-box">Layer above POM for reusability</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#9888; Common Exam Traps</div>
       <div class="card-grid cols-2">
-        <div class="trap-card sketch-border" style="background:var(--pastel-pink)"><div class="tc-name">Correct, wrong layer</div><div class="tc-desc">Valid answer but belongs to a different framework layer. ISTQB is strict about layer responsibility.</div></div>
-        <div class="trap-card sketch-border" style="background:var(--pastel-yellow)"><div class="tc-name">Practical but breaks maintainability</div><div class="tc-desc">Mirrors real practice but violates ISTQB principles. Prioritize long-term cost reduction.</div></div>
-        <div class="trap-card sketch-border" style="background:var(--pastel-orange)"><div class="tc-name">Tool-first thinking</div><div class="tc-desc">Focuses on tools not architecture. ISTQB prefers tool-agnostic design with defined interfaces.</div></div>
-        <div class="trap-card sketch-border" style="background:var(--pastel-blue)"><div class="tc-name">Best vs works</div><div class="tc-desc">Multiple answers work, only one is best. Choose scalability, modifiability, reusability.</div></div>
+        <div class="trap-card sketch-border" style="background:var(--pastel-pink)"><div class="tc-name"><span class="tt" style="display:inline-block">Correct, wrong layer<div class="tt-box">Valid answer but belongs to a different framework layer. ISTQB is strict about layer responsibility.</div></span></div></div>
+        <div class="trap-card sketch-border" style="background:var(--pastel-yellow)"><div class="tc-name"><span class="tt" style="display:inline-block">Practical but breaks maintainability<div class="tt-box">Mirrors real practice but violates ISTQB principles. Prioritize long-term cost reduction.</div></span></div></div>
+        <div class="trap-card sketch-border" style="background:var(--pastel-orange)"><div class="tc-name"><span class="tt" style="display:inline-block">Tool-first thinking<div class="tt-box">Focuses on tools not architecture. ISTQB prefers tool-agnostic design with defined interfaces.</div></span></div></div>
+        <div class="trap-card sketch-border" style="background:var(--pastel-blue)"><div class="tc-name"><span class="tt" style="display:inline-block">Best vs works<div class="tt-box">Multiple answers work, only one is best. Choose scalability, modifiability, reusability.</div></span></div></div>
       </div>
       <div class="tt" style="display:block;text-align:center;margin-top:14px;font-size:.9rem">Elimination checklist
         <div class="tt-box" style="left:50%">When stuck: (1) Separates concerns? (2) Reduces maintenance? (3) Scales? (4) Fits team? (5) Avoids lock-in? Eliminate if fails 2+.</div>
@@ -646,38 +637,30 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#9888; Risks</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)">
-          <div class="ic-icon">&#127760;</div>
-          <div class="ic-title">Infrastructure</div>
-          <div class="ic-desc">Firewalls, network reliability, resource constraints (CPU/RAM)</div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-yellow)">
-          <div class="ic-icon">&#128736;</div>
-          <div class="ic-title">Technical</div>
-          <div class="ic-desc">Packaging (VCS), logging, test structuring, auto-updates breaking tests</div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#127760;</div><div class="ic-title"><span class="tt" style="display:inline-block">Infrastructure<div class="tt-box">Firewalls, network reliability, resource constraints (CPU/RAM)</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128736;</div><div class="ic-title"><span class="tt" style="display:inline-block">Technical<div class="tt-box">Packaging (VCS), logging, test structuring, auto-updates breaking tests</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128196; Log Levels</div>
       <div class="bar-rows">
-        <div class="bar-row"><div class="bar-label" style="color:#E74C3C">Fatal</div><div class="bar-track"><div class="bar-fill" data-width="100" style="background:var(--pastel-pink)"></div></div><div class="bar-desc">Execution stopped</div></div>
-        <div class="bar-row"><div class="bar-label" style="color:#E67E22">Error</div><div class="bar-track"><div class="bar-fill" data-width="83" style="background:var(--pastel-orange)"></div></div><div class="bar-desc">Test failed</div></div>
-        <div class="bar-row"><div class="bar-label" style="color:#F1C40F">Warn</div><div class="bar-track"><div class="bar-fill" data-width="66" style="background:var(--pastel-yellow)"></div></div><div class="bar-desc">Unexpected, test continued</div></div>
-        <div class="bar-row"><div class="bar-label" style="color:#2ECC71">Info</div><div class="bar-track"><div class="bar-fill" data-width="50" style="background:var(--pastel-green)"></div></div><div class="bar-desc">Basic status info</div></div>
-        <div class="bar-row"><div class="bar-label" style="color:#3498DB">Debug</div><div class="bar-track"><div class="bar-fill" data-width="33" style="background:var(--pastel-blue)"></div></div><div class="bar-desc">Investigation details</div></div>
-        <div class="bar-row"><div class="bar-label" style="color:#9B59B6">Trace</div><div class="bar-track"><div class="bar-fill" data-width="16" style="background:var(--pastel-purple)"></div></div><div class="bar-desc">Deep troubleshooting</div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#E74C3C"><span class="tt" style="display:inline-block">Fatal<div class="tt-box">Execution stopped</div></span></div><div class="bar-track"><div class="bar-fill" data-width="100" style="background:var(--pastel-pink)"></div></div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#E67E22"><span class="tt" style="display:inline-block">Error<div class="tt-box">Test failed</div></span></div><div class="bar-track"><div class="bar-fill" data-width="83" style="background:var(--pastel-orange)"></div></div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#F1C40F"><span class="tt" style="display:inline-block">Warn<div class="tt-box">Unexpected, test continued</div></span></div><div class="bar-track"><div class="bar-fill" data-width="66" style="background:var(--pastel-yellow)"></div></div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#2ECC71"><span class="tt" style="display:inline-block">Info<div class="tt-box">Basic status info</div></span></div><div class="bar-track"><div class="bar-fill" data-width="50" style="background:var(--pastel-green)"></div></div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#3498DB"><span class="tt" style="display:inline-block">Debug<div class="tt-box">Investigation details</div></span></div><div class="bar-track"><div class="bar-fill" data-width="33" style="background:var(--pastel-blue)"></div></div></div>
+        <div class="bar-row"><div class="bar-label" style="color:#9B59B6"><span class="tt" style="display:inline-block">Trace<div class="tt-box">Deep troubleshooting</div></span></div><div class="bar-track"><div class="bar-fill" data-width="16" style="background:var(--pastel-purple)"></div></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128736; Maintainability &mdash; Clean Code</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128221;</div><div class="ic-title">Clear Naming</div><div class="ic-desc">Meaningful names, common conventions</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128194;</div><div class="ic-title">Logical Structure</div><div class="ic-desc">Consistent project layout, easy to find things</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128683;</div><div class="ic-title">No Hardcoding</div><div class="ic-desc">Data-driven, constants for static values</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#9996;</div><div class="ic-title">Simple Methods</div><div class="ic-desc">One method = one job, few params</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128221;</div><div class="ic-title"><span class="tt" style="display:inline-block">Clear Naming<div class="tt-box">Meaningful names, common conventions</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128194;</div><div class="ic-title"><span class="tt" style="display:inline-block">Logical Structure<div class="tt-box">Consistent project layout, easy to find things</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128683;</div><div class="ic-title"><span class="tt" style="display:inline-block">No Hardcoding<div class="tt-box">Data-driven, constants for static values</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#9996;</div><div class="ic-title"><span class="tt" style="display:inline-block">Simple Methods<div class="tt-box">One method = one job, few params</div></span></div></div>
       </div>
     </div>
   </div>
@@ -703,34 +686,19 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#128736; Pipeline Fit by Test Level</div>
       <div class="flow-row">
-        <div class="flow-node" style="background:var(--pastel-green)">
-          <div class="fn-icon">&#9989;</div>
-          <div class="fn-name">Config</div>
-          <div class="fn-desc">During build of test project<br>"Testing the tests"</div>
+        <div class="flow-node" style="background:var(--pastel-green)"><div class="fn-icon">&#9989;</div><div class="fn-name"><span class="tt" style="display:inline-block">Config<div class="tt-box">During build of test project<br>"Testing the tests"</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-blue)">
-          <div class="fn-icon">&#128295;</div>
-          <div class="fn-name">Component</div>
-          <div class="fn-desc">During build step<br>Quality gates</div>
+        <div class="flow-node" style="background:var(--pastel-blue)"><div class="fn-icon">&#128295;</div><div class="fn-name"><span class="tt" style="display:inline-block">Component<div class="tt-box">During build step<br>Quality gates</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-yellow)">
-          <div class="fn-icon">&#128279;</div>
-          <div class="fn-name">Comp. Integration</div>
-          <div class="fn-desc">Alongside component<br>In CI pipeline</div>
+        <div class="flow-node" style="background:var(--pastel-yellow)"><div class="fn-icon">&#128279;</div><div class="fn-name"><span class="tt" style="display:inline-block">Comp. Integration<div class="tt-box">Alongside component<br>In CI pipeline</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-orange)">
-          <div class="fn-icon">&#128200;</div>
-          <div class="fn-name">System</div>
-          <div class="fn-desc">In CD pipeline<br>Final quality gate</div>
+        <div class="flow-node" style="background:var(--pastel-orange)"><div class="fn-icon">&#128200;</div><div class="fn-name"><span class="tt" style="display:inline-block">System<div class="tt-box">In CD pipeline<br>Final quality gate</div></span></div>
           <div class="flow-arrow">&#10132;</div>
         </div>
-        <div class="flow-node" style="background:var(--pastel-pink)">
-          <div class="fn-icon">&#128279;</div>
-          <div class="fn-name">System Integration</div>
-          <div class="fn-desc">In delivery pipeline<br>Between systems</div>
+        <div class="flow-node" style="background:var(--pastel-pink)"><div class="fn-icon">&#128279;</div><div class="fn-name"><span class="tt" style="display:inline-block">System Integration<div class="tt-box">In delivery pipeline<br>Between systems</div></span></div>
         </div>
       </div>
     </div>
@@ -738,55 +706,30 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#9878; Deployment Approaches</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)">
-          <div class="ic-icon">&#128640;</div>
-          <div class="ic-title">Option 1: Tests in Deployment</div>
-          <div class="ic-desc">Tests run during deploy phase</div>
-          <div class="bullet-list" style="margin-top:8px">
-            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Auto rollback on fail</span></div>
-            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128683;</span><span>Must redeploy to rerun</span></div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)">
-          <div class="ic-icon">&#128736;</div>
-          <div class="ic-title">Option 2: Separate Pipeline</div>
-          <div class="ic-desc">Tests in own pipeline post-deploy</div>
-          <div class="bullet-list" style="margin-top:8px">
-            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#9989;</span><span>Multiple test suites OK</span></div>
-            <div class="bullet-item" style="font-size:.85rem"><span class="bi-icon">&#128683;</span><span>No auto quality gate</span></div>
-          </div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128640;</div><div class="ic-title"><span class="tt" style="display:inline-block">Option 1: Tests in Deployment<div class="tt-box">Tests run during deploy phase<br>&#9989; Auto rollback on fail<br>&#128683; Must redeploy to rerun</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128736;</div><div class="ic-title"><span class="tt" style="display:inline-block">Option 2: Separate Pipeline<div class="tt-box">Tests in own pipeline post-deploy<br>&#9989; Multiple test suites OK<br>&#128683; No auto quality gate</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128230; Config Management</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#127760;</div><div class="ic-title">Env Config</div><div class="ic-desc">URLs, credentials, settings per env</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128202;</div><div class="ic-title">Test Data</div><div class="ic-desc">Varies by env, release, features</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128195;</div><div class="ic-title">Test Suites</div><div class="ic-desc">Smoke, regression, feature-specific</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#127760;</div><div class="ic-title"><span class="tt" style="display:inline-block">Env Config<div class="tt-box">URLs, credentials, settings per env</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128202;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Data<div class="tt-box">Varies by env, release, features</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128195;</div><div class="ic-title"><span class="tt" style="display:inline-block">Test Suites<div class="tt-box">Smoke, regression, feature-specific</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128279; Contract Testing</div>
       <div class="contract-row">
-        <div class="contract-box sketch-border" style="background:var(--pastel-green)">
-          <div class="ct-icon">&#128100;</div>
-          <div class="ct-name">Consumer</div>
-          <div class="ct-desc">Service calling the API</div>
+        <div class="contract-box sketch-border" style="background:var(--pastel-green)"><div class="ct-icon">&#128100;</div><div class="ct-name"><span class="tt" style="display:inline-block">Consumer<div class="tt-box">Service calling the API</div></span></div>
         </div>
         <div class="contract-arrow">&#128279;</div>
-        <div class="contract-box sketch-border" style="background:var(--pastel-yellow)">
-          <div class="ct-icon">&#128221;</div>
-          <div class="ct-name">Contract</div>
-          <div class="ct-desc">Agreed interactions &amp; rules</div>
+        <div class="contract-box sketch-border" style="background:var(--pastel-yellow)"><div class="ct-icon">&#128221;</div><div class="ct-name"><span class="tt" style="display:inline-block">Contract<div class="tt-box">Agreed interactions &amp; rules</div></span></div>
         </div>
         <div class="contract-arrow">&#128279;</div>
-        <div class="contract-box sketch-border" style="background:var(--pastel-blue)">
-          <div class="ct-icon">&#128736;</div>
-          <div class="ct-name">Provider</div>
-          <div class="ct-desc">Service offering the API</div>
+        <div class="contract-box sketch-border" style="background:var(--pastel-blue)"><div class="ct-icon">&#128736;</div><div class="ct-name"><span class="tt" style="display:inline-block">Provider<div class="tt-box">Service offering the API</div></span></div>
         </div>
       </div>
       <div style="text-align:center;font-size:.9rem;color:var(--text-light);margin-top:8px">
@@ -816,30 +759,30 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#128200; Data Sources</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128187;</div><div class="ic-title">SUT Logs</div><div class="ic-desc">UI, API, app, web server, database logs</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128736;</div><div class="ic-title">Framework Logs</div><div class="ic-desc">Automation logs, build logs, deployment logs</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128200;</div><div class="ic-title">Production &amp; Perf</div><div class="ic-desc">Monitoring data, load/stress/spike logs</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128248;</div><div class="ic-title">Visual Records</div><div class="ic-desc">Screenshots, screen recordings</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128187;</div><div class="ic-title"><span class="tt" style="display:inline-block">SUT Logs<div class="tt-box">UI, API, app, web server, database logs</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128736;</div><div class="ic-title"><span class="tt" style="display:inline-block">Framework Logs<div class="tt-box">Automation logs, build logs, deployment logs</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128200;</div><div class="ic-title"><span class="tt" style="display:inline-block">Production &amp; Perf<div class="tt-box">Monitoring data, load/stress/spike logs</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128248;</div><div class="ic-title"><span class="tt" style="display:inline-block">Visual Records<div class="tt-box">Screenshots, screen recordings</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128101; Reports by Stakeholder</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128188;</div><div class="ic-title">Management</div><div class="ic-desc">Trends, pass/fail ratios, reliability</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128194;</div><div class="ic-title">Operational</div><div class="ic-desc">Product use metrics, business impact</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128187;</div><div class="ic-title">Technical</div><div class="ic-desc">Root causes, specific failure details</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#128188;</div><div class="ic-title"><span class="tt" style="display:inline-block">Management<div class="tt-box">Trends, pass/fail ratios, reliability</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128194;</div><div class="ic-title"><span class="tt" style="display:inline-block">Operational<div class="tt-box">Product use metrics, business impact</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#128187;</div><div class="ic-title"><span class="tt" style="display:inline-block">Technical<div class="tt-box">Root causes, specific failure details</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128269; Failure Investigation</div>
       <div class="layer-stack" style="max-width:550px">
-        <div class="layer-box sketch-border" style="background:var(--pastel-blue)"><div class="layer-name">1. Check History</div><div class="layer-desc">Known issue in system or automation?</div></div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-green)"><div class="layer-name">2. Identify the Test</div><div class="layer-desc">What is it checking? Look up in test mgmt.</div></div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)"><div class="layer-name">3. Find Failing Step</div><div class="layer-desc">Which step failed? Check automation logs.</div></div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-orange)"><div class="layer-name">4. Analyze System State</div><div class="layer-desc">Screenshots, API logs &mdash; compare expected vs actual.</div></div>
-        <div class="layer-box sketch-border" style="background:var(--pastel-pink)"><div class="layer-name">5. Log Defect</div><div class="layer-desc">If system doesn't match &rarr; defect with all supporting data.</div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-blue)"><div class="layer-name"><span class="tt" style="display:inline-block">1. Check History<div class="tt-box">Known issue in system or automation?</div></span></div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-green)"><div class="layer-name"><span class="tt" style="display:inline-block">2. Identify the Test<div class="tt-box">What is it checking? Look up in test mgmt.</div></span></div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-yellow)"><div class="layer-name"><span class="tt" style="display:inline-block">3. Find Failing Step<div class="tt-box">Which step failed? Check automation logs.</div></span></div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-orange)"><div class="layer-name"><span class="tt" style="display:inline-block">4. Analyze System State<div class="tt-box">Screenshots, API logs &mdash; compare expected vs actual.</div></span></div></div>
+        <div class="layer-box sketch-border" style="background:var(--pastel-pink)"><div class="layer-name"><span class="tt" style="display:inline-block">5. Log Defect<div class="tt-box">If system doesn't match &rarr; defect with all supporting data.</div></span></div></div>
       </div>
     </div>
 
@@ -887,25 +830,25 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#9989; What to Verify</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9889;</div><div class="ic-title">Functional</div><div class="ic-desc">Do components work correctly?</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128200;</div><div class="ic-title">Non-Functional</div><div class="ic-desc">Performance, memory, interoperability</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128221;</div><div class="ic-title">Accuracy</div><div class="ic-desc">Logs &amp; reports reflect reality</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9889;</div><div class="ic-title"><span class="tt" style="display:inline-block">Functional<div class="tt-box">Do components work correctly?</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128200;</div><div class="ic-title"><span class="tt" style="display:inline-block">Non-Functional<div class="tt-box">Performance, memory, interoperability</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-blue)"><div class="ic-icon">&#128221;</div><div class="ic-title"><span class="tt" style="display:inline-block">Accuracy<div class="tt-box">Logs &amp; reports reflect reality</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128203; Test Suite Checks</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#9989;</div><div class="ic-title">Completeness</div><div class="ic-desc">All tests have expected results, test data present, correct SUT version</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128260;</div><div class="ic-title">Repeatability</div><div class="ic-desc">Same test = same result every time. Remove flaky tests from active suite.</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#9989;</div><div class="ic-title"><span class="tt" style="display:inline-block">Completeness<div class="tt-box">All tests have expected results, test data present, correct SUT version</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128260;</div><div class="ic-title"><span class="tt" style="display:inline-block">Repeatability<div class="tt-box">Same test = same result every time. Remove flaky tests from active suite.</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#9888; Watch Out</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128165;</div><div class="ic-title">Tool Intrusiveness</div><div class="ic-desc">Automation can change system behavior &mdash; false failures drop confidence</div></div>
-        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128221;</div><div class="ic-title">Static Analysis</div><div class="ic-desc">Test code can have security bugs too (e.g. plaintext passwords in scripts)</div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128165;</div><div class="ic-title"><span class="tt" style="display:inline-block">Tool Intrusiveness<div class="tt-box">Automation can change system behavior &mdash; false failures drop confidence</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-orange)"><div class="ic-icon">&#128221;</div><div class="ic-title"><span class="tt" style="display:inline-block">Static Analysis<div class="tt-box">Test code can have security bugs too (e.g. plaintext passwords in scripts)</div></span></div></div>
       </div>
     </div>
   </div>
@@ -940,46 +883,17 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#129302; AI Self-Healing Tests</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:var(--pastel-purple)">
-          <div class="ic-icon">&#129302;</div>
-          <div class="ic-title">How It Works</div>
-          <div class="ic-desc">UI locators as inputs &rarr; detect change &rarr; ML + image recognition &rarr; auto-fix &rarr; report changes</div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)">
-          <div class="ic-icon">&#9989;</div>
-          <div class="ic-title">Benefit</div>
-          <div class="ic-desc">Speeds up maintenance &mdash; version control &amp; code updates happen faster</div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-purple)"><div class="ic-icon">&#129302;</div><div class="ic-title"><span class="tt" style="display:inline-block">How It Works<div class="tt-box">UI locators as inputs &rarr; detect change &rarr; ML + image recognition &rarr; auto-fix &rarr; report changes</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#9989;</div><div class="ic-title"><span class="tt" style="display:inline-block">Benefit<div class="tt-box">Speeds up maintenance &mdash; version control &amp; code updates happen faster</div></span></div></div>
       </div>
     </div>
 
     <div class="sub-section anim">
       <div class="sub-title">&#128161; Wait Mechanisms (Worst &rarr; Best)</div>
       <div class="card-grid cols-3">
-        <div class="info-card sketch-border" style="background:var(--pastel-pink)">
-          <div class="ic-icon">&#128465;</div>
-          <div class="ic-title">1. Hard-coded</div>
-          <div class="ic-desc">Wait X ms. Unpredictable. Fragile.</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Avoid
-            <div class="tt-box">Response times vary. Too short = fail. Too long = waste. Unreliable.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-yellow)">
-          <div class="ic-icon">&#128260;</div>
-          <div class="ic-title">2. Polling</div>
-          <div class="ic-desc">Check state periodically. Include timeouts!</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Better
-            <div class="tt-box">Waits only as long as needed. Much better but can miss race conditions.</div>
-          </div>
-        </div>
-        <div class="info-card sketch-border" style="background:var(--pastel-green)">
-          <div class="ic-icon">&#11088;</div>
-          <div class="ic-title">3. Event Subscription</div>
-          <div class="ic-desc">React to system events. Most reliable.</div>
-          <div class="tt" style="display:inline-block;margin-top:6px;font-size:.85rem">Best
-            <div class="tt-box">Needs event support in language &amp; system. Reacts to actual changes. Still needs timeouts.</div>
-          </div>
-        </div>
+        <div class="info-card sketch-border" style="background:var(--pastel-pink)"><div class="ic-icon">&#128465;</div><div class="ic-title"><span class="tt" style="display:inline-block">1. Hard-coded<div class="tt-box">Wait X ms. Unpredictable. Fragile. Response times vary. Too short = fail. Too long = waste. Unreliable.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-yellow)"><div class="ic-icon">&#128260;</div><div class="ic-title"><span class="tt" style="display:inline-block">2. Polling<div class="tt-box">Check state periodically. Include timeouts! Waits only as long as needed. Much better but can miss race conditions.</div></span></div></div>
+        <div class="info-card sketch-border" style="background:var(--pastel-green)"><div class="ic-icon">&#11088;</div><div class="ic-title"><span class="tt" style="display:inline-block">3. Event Subscription<div class="tt-box">React to system events. Most reliable. Needs event support in language &amp; system. Reacts to actual changes. Still needs timeouts.</div></span></div></div>
       </div>
     </div>
 
@@ -1006,9 +920,9 @@ body{background:var(--bg);color:var(--text);font-family:'Patrick Hand',cursive;o
     <div class="sub-section anim">
       <div class="sub-title">&#128221; Beyond Testing</div>
       <div class="card-grid cols-2">
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#127760;</div><div class="ic-title">Environment Setup</div><div class="ic-desc">Auto-create test data, cleanup environments</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128197;</div><div class="ic-title">Data Aging</div><div class="ic-desc">Update date fields to keep them current</div></div>
-        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128248;</div><div class="ic-title">Screenshots/Video</div><div class="ic-desc">Release docs, marketing, usage examples</div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#127760;</div><div class="ic-title"><span class="tt" style="display:inline-block">Environment Setup<div class="tt-box">Auto-create test data, cleanup environments</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128197;</div><div class="ic-title"><span class="tt" style="display:inline-block">Data Aging<div class="tt-box">Update date fields to keep them current</div></span></div></div>
+        <div class="info-card sketch-border" style="background:#fff"><div class="ic-icon">&#128248;</div><div class="ic-title"><span class="tt" style="display:inline-block">Screenshots/Video<div class="tt-box">Release docs, marketing, usage examples</div></span></div></div>
       </div>
     </div>
 
