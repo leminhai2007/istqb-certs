@@ -227,6 +227,21 @@ document.querySelectorAll('.toc-item').forEach(a=>{
   a.addEventListener('click', ()=>{ if(window.innerWidth<=860) closeToc(); });
 });
 
+// ─── Tooltips: keep inside viewport ───
+document.querySelectorAll('.tt').forEach(tt=>{
+  tt.addEventListener('mouseenter', ()=>{
+    const box = tt.querySelector('.tt-box');
+    if(!box) return;
+    const pad = 8, vw = window.innerWidth;
+    const tr = tt.getBoundingClientRect();
+    const bw = box.offsetWidth;
+    let x = tr.left + (tr.width - bw)/2;
+    x = Math.max(pad, Math.min(x, vw - bw - pad));
+    box.style.left = (x - tr.left) + 'px';
+    box.style.transform = 'translateX(0)';
+  });
+});
+
 // ─── Active TOC highlight on scroll ───
 const sections = document.querySelectorAll('.chapter-section');
 const tocItems = document.querySelectorAll('.toc-item[data-section]');

@@ -736,6 +736,7 @@ function closeToc(){tocSidebar.classList.remove('open');tocOverlay.classList.rem
 tocToggle.addEventListener('click',()=>{tocSidebar.classList.contains('open')?closeToc():openToc()});
 tocOverlay.addEventListener('click',closeToc);
 document.querySelectorAll('.toc-item').forEach(a=>{a.addEventListener('click',()=>{if(window.innerWidth<=860)closeToc()})});
+document.querySelectorAll('.tt').forEach(tt=>{tt.addEventListener('mouseenter',()=>{const box=tt.querySelector('.tt-box');if(!box)return;const pad=8,vw=window.innerWidth,tr=tt.getBoundingClientRect(),bw=box.offsetWidth;let x=tr.left+(tr.width-bw)/2;x=Math.max(pad,Math.min(x,vw-bw-pad));box.style.left=(x-tr.left)+'px';box.style.transform='translateX(0)'})});
 
 const sections=document.querySelectorAll('.chapter-section'),tocItems=document.querySelectorAll('.toc-item[data-section]');
 function updateToc(){let c='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)c=s.id});tocItems.forEach(a=>{a.classList.toggle('active',a.dataset.section===c)})}
